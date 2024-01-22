@@ -21,6 +21,9 @@ read -p 'Insert number (default is 3): ' assemblyopt
 echo
 echo "=============="
 echo
+if [[ -z "$assemblyopt" ]]; then
+	assemblyopt=3
+fi
 source ~/anaconda3/etc/profile.d/conda.sh
 conda activate getorganelle
 if [ $assemblyopt == 1 ]
@@ -101,7 +104,7 @@ then
                                 echo 
                                 echo "=============="
                         done < list.txt
-                elif [ $assemblyopt == 3 || $assemblyopt == 2 || $assemblyopt == 1]
+                elif [ $assemblyopt == 3 || $assemblyopt == 2 || $assemblyopt == 1 ]
                         echo ==============
                         echo
                         echo "Invalid option, execute script again"
@@ -111,4 +114,5 @@ then
                         echo "done"
                 fi
                         echo "done"
+                        echo "opt: $assemblyopt"
 ) 2<&1 | tee -a assembly.log
