@@ -1,5 +1,5 @@
 # autobiosh
-Scripts that i made to automate the bioinformatics work.
+Scripts that i made to automate the bioinformatics work once i realized how to do something :D
 
 # assembly.sh
 This script automate assembly for organelles with Illumina Reads running GetOrganelle
